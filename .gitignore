@@ -1,11 +1,12 @@
 # Ignoring directories
 /node_modules
+.idea
 
 # Ignoring files
-.babelrc
-.bowerrc
+//.babelrc
+//.bowerrc
 //.gitignore
-.jshintrc
-.npmrc
-gulpfile.js
-package.json
+//.jshintrc
+//.npmrc
+//gulpfile.js
+//package.json
