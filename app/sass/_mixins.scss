@@ -1,0 +1,13 @@
+/* --------------------------- */
+$bg-main: #ffffff;
+$text-color-1: #000000;
+$text-size-p: 15px;
+$font-300: 'helveticaneuecyr-300', sans-serif;
+$font-400: 'helveticaneuecyr-400', sans-serif;
+
+/* --------------------------- */
+@mixin title($size) {
+  font-family: $font-400;
+  font-size: $size;
+}
+/* --------------------------- */

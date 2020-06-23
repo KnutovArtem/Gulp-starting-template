@@ -1,0 +1,34 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url, $f-format) {
+
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    src: url($f-url) format($f-format);
+  }
+}
+
+@include font('helveticaneuecyr-300', lighter, 300, '../fonts/helveticaneuecyr-light.eot', 'eot');
+@include font('helveticaneuecyr-300', lighter, 300, '../fonts/helveticaneuecyr-light.ttf', 'ttf');
+@include font('helveticaneuecyr-300', lighter, 300, '../fonts/helveticaneuecyr-light.woff', 'woff');
+@include font('helveticaneuecyr-400', Normal, 400, '../fonts/helveticaneuecyr-roman.eot', 'eot');
+@include font('helveticaneuecyr-400', Normal, 400, '../fonts/helveticaneuecyr-roman.ttf', 'ttf');
+@include font('helveticaneuecyr-400', Normal, 400, '../fonts/helveticaneuecyr-roman.woff', 'woff');
+
+ /*
+ 100 - Thin (Hairline)
+ 200 - Extra Light (Ultra Light)
+ 300 - Light (Book)
+ 400 - Normal (Regular)
+ 500 - Medium
+ 600 - Semi Bold (Demi Bold)
+ 700 - Bold
+ 800 - Extra Bold (Ultra Bold)
+ 900 - Black (Heavy)
+
+ @font-face
+ 	font-family: 'raleway-example'
+ 	src: url('../fonts/RalewayBold.woff') format('woff')
+ 	font-weight: bold
+ 	*/
+

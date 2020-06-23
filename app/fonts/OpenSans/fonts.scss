@@ -1,0 +1,47 @@
+@mixin font($f-name, $f-style, $f-weight, $f-url, $f-format) {
+
+  @font-face {
+    font-family: $f-name;
+    font-style: $f-style;
+    font-weight: $f-weight;
+    src: url($f-url) format($f-format);
+  }
+}
+
+@include font('opensans-300', lighter, 300, 'http://artemknutov.tech/fonts/OpenSans/OpenSansLight/OpenSansLight.eot', 'eot');
+@include font('opensans-300', lighter, 300, 'http://artemknutov.tech/fonts/OpenSans/OpenSansLight/OpenSansLight.ttf', 'ttf');
+@include font('opensans-300', lighter, 300, 'http://artemknutov.tech/fonts/OpenSans/OpenSansLight/OpenSansLight.woff', 'woff');
+@include font('opensans-300', lighter, 300, 'http://artemknutov.tech/fonts/OpenSans/OpenSansLight/OpenSansLight.woff', 'woff2');
+
+@include font('opensans-400', Normal, 400, 'http://artemknutov.tech/fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot', 'eot');
+@include font('opensans-400', Normal, 400, 'http://artemknutov.tech/fonts/OpenSans/OpenSansRegular/OpenSansRegular.ttf', 'ttf');
+@include font('opensans-400', Normal, 400, 'http://artemknutov.tech/fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff', 'woff');
+@include font('opensans-400', Normal, 400, 'http://artemknutov.tech/fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff', 'woff2');
+
+@include font('opensans-700', Bold, 700, 'http://artemknutov.tech/fonts/OpenSans/OpenSansBold/OpenSansBold.eot', 'eot');
+@include font('opensans-700', Bold, 700, 'http://artemknutov.tech/fonts/OpenSans/OpenSansBold/OpenSansBold.ttf', 'ttf');
+@include font('opensans-700', Bold, 700, 'http://artemknutov.tech/fonts/OpenSans/OpenSansBold/OpenSansBold.woff', 'woff');
+@include font('opensans-700', Bold, 700, 'http://artemknutov.tech/fonts/OpenSans/OpenSansBold/OpenSansBold.woff', 'woff2');
+
+@include font('opensans-800', ExtraBold, 800, 'http://artemknutov.tech/fonts/OpenSans/OpenSanExtraBold/OpenSanExtraBold.eot', 'eot');
+@include font('opensans-800', ExtraBold, 800, 'http://artemknutov.tech/fonts/OpenSans/OpenSanExtraBold/OpenSanExtraBold.ttf', 'ttf');
+@include font('opensans-800', ExtraBold, 800, 'http://artemknutov.tech/fonts/OpenSans/OpenSanExtraBold/OpenSanExtraBold.woff', 'woff');
+@include font('opensans-800', ExtraBold, 800, 'http://artemknutov.tech/fonts/OpenSans/OpenSanExtraBold/OpenSanExtraBold.woff', 'woff2');
+
+/*
+100 - Thin (Hairline)
+200 - Extra Light (Ultra Light)
+300 - Light (Book)
+400 - Normal (Regular)
+500 - Medium
+600 - Semi Bold (Demi Bold)
+700 - Bold
+800 - Extra Bold (Ultra Bold)
+900 - Black (Heavy)
+
+@font-face
+    font-family: 'raleway-example'
+    src: url('../fonts/RalewayBold.woff') format('woff')
+    font-weight: bold
+    */
+
