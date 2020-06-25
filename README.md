@@ -1,10 +1,20 @@
-### Gulp: starting template.
+# Starting template Gulp
 
----
+### Compiles and hot-reloads for development
+```
+gulp
+```
 
-Start project: <br>
-command `gulp`
+### Compiles and minifies for production
+```
+gulp build
+```
 
----
+### The official documentation
+[gulpjs.com](https://gulpjs.com/). <br>
+[browsersync.io](https://browsersync.io/). <br>
+[babeljs.io](https://babeljs.io/).
 
-! Make changes to the file gitignore
+### Additional documentation
+[webdesign-master.ru](https://webdesign-master.ru/blog/docs/gulp-documentation.html).
+

@@ -1,8 +1,8 @@
 
 *, *:before, *:after{
 
-  -webkit-box-sizing: border-box; /* Нужно для мобильного WebKit */
-  -moz-box-sizing: border-box; /* Нужно для Firefox */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html, body, div, span, applet, object, iframe,
@@ -60,9 +60,9 @@ a:hover{
   text-decoration: none;
 }
 input
-  /*input:hover,*/
-  /*input:active,*/
-  /*input:focus*/
+  /*input:hover,
+  input:active,
+  input:focus*/
 {
   outline: none;
   border: none;
@@ -92,9 +92,9 @@ select{
   border: none;
 }
 textarea
-  /*textarea:hover,*/
-  /*textarea:active,*/
-  /*textarea:focus*/
+  /*textarea:hover,
+  textarea:active,
+  textarea:focus*/
 {
   border: none;
   outline: none;
