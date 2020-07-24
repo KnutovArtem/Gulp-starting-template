@@ -1,0 +1,6 @@
+h1{
+  width: 100vw;
+  height: 50vh;
+  @include flex-center();
+  color: #1877cd;
+}

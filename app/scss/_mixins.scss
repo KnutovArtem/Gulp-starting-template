@@ -1,13 +1,53 @@
-/* --------------------------- */
-$bg-main: #ffffff;
-$text-color-1: #000000;
-$text-size-p: 15px;
+/* Mixins --------------------------- */
+
+$color-background: #fff;
+$color-text: #000;
+
+$color-1: #fff;
+
+$font-size: 15px;
+
+$font-100: 'helveticaneuecyr-100', sans-serif;
+$font-200: 'helveticaneuecyr-200', sans-serif;
 $font-300: 'helveticaneuecyr-300', sans-serif;
 $font-400: 'helveticaneuecyr-400', sans-serif;
+$font-500: 'helveticaneuecyr-500', sans-serif;
+$font-900: 'helveticaneuecyr-900', sans-serif;
 
-/* --------------------------- */
-@mixin title($size) {
-  font-family: $font-400;
-  font-size: $size;
+@mixin  flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/* --------------------------- */
+
+/* Element styles --------------------------- */
+
+section{
+  margin-bottom: 30px;
+}
+
+h1,
+.title{
+  font-family: $font-500;
+  font-size: 30px;
+}
+
+h2,
+.subtitle{
+  font-family: $font-400;
+  font-size: 24px;
+}
+
+.button{
+  padding: 5px 15px;
+  background: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.1);
+
+  &:active{
+    transition: .3s;
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+}
