@@ -12,10 +12,33 @@ const del          = require('del');
 /*Reboot*/
 function browsersync() {
     browserSync.init({
-        server: { baseDir: 'app/' },
+        server: {
+            baseDir: "app",
+            index: "index.html"
+        },
         notify: false,
-        online: true,
+        //online: false,
+        //logLevel: "debug",
+        //tunnel: true,
+        //browser: "chrome",
     });
+}
+
+
+/*Style files*/
+function stylesmin() {
+    return src('app/scss/main.scss')
+    .pipe(scss())
+    .pipe(concat('main.min.css'))
+    .pipe(autoprefixer({
+        overrideBrowserslist: [ 'last 10 versions' ],
+        grid: true
+    }))
+    .pipe(cleancss(({
+        level: { 1: { specialComments: 0 } },
+    })))
+    .pipe(dest('app/css/'))
+    .pipe(browserSync.stream());
 }
 
 /*Style files*/
@@ -55,18 +78,22 @@ function scripts() {
 function images() {
     return src('app/img/src/**/*')
         .pipe(imagemin())
-        .pipe(dest('app/img/dist'));
+        .pipe(dest('dist/img/src'));
 }
 
 /*Clearing the img folder*/
 function cleanimg() {
-    return del('app/img/src/**/*', { force: true });
+    return del('dist/img/src', { force: true });
 }
 
 /*Clearing the dist folder*/
 function cleandist() {
     return del('dist/**/*', { force: true });
 }
+
+//function cleanoppa() {
+//    return del('dist/img/src', { force: true });
+//}
 
 /*Build*/
 function buildcopy() {
@@ -84,7 +111,7 @@ function startwatch() {
     watch('app/scss/**/*.scss', styles);
     watch([ 'app/js/**/*.js', '!app/js/**/*.min.js' ], scripts);
     watch('app/**/*.html').on('change', browserSync.reload);
-    watch('app/img/src/**/*', images);
+    //watch('app/img/src/**/*', images);
 }
 
 /*Export task*/
@@ -95,5 +122,5 @@ exports.images = images;
 exports.cleanimg = cleanimg;
 exports.cleandist = cleandist;
 exports.babel = babel;
-exports.build = series(cleandist, styles, scripts, images, buildcopy);
-exports.default = parallel(styles, images, cleanimg, scripts, browsersync, startwatch);
+exports.prod = parallel(cleandist, stylesmin, images, cleanimg, scripts, buildcopy);
+exports.dev = parallel(styles, scripts, browsersync, startwatch);

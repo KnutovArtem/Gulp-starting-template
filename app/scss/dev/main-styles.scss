@@ -1,6 +1,5 @@
-h1{
+.content{
+  @extend %f-center;
   width: 100vw;
-  height: 50vh;
-  @include flex-center();
-  color: #1877cd;
+  height: 100vh;
 }
